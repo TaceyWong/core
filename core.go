@@ -1,0 +1,58 @@
+package main
+
+import (
+	"log"
+	"os"
+	"sort"
+	"time"
+
+	"github.com/TaceyWong/core/cmd"
+
+	"github.com/urfave/cli/v2"
+)
+
+// Setup the main-in of Core
+func Setup() {
+	app := cli.NewApp()
+	app.Name = "core"
+	app.Version = "0.0.1"
+	app.Compiled = time.Now()
+	app.Authors = []*cli.Author{
+		&cli.Author{
+			Name:  "Tacey Wong",
+			Email: "xinyong.wang@qq.com",
+		},
+	}
+	app.Copyright = "(c) 2020 - Forever Tacey Wong"
+	app.Usage = "Clone of GNU Coreutils"
+	app.EnableBashCompletion = true
+	app.Action = func(c *cli.Context) error {
+		return nil
+	}
+
+	app.Flags = []cli.Flag{
+		&cli.StringFlag{
+			Name:  "lang, l",
+			Value: "english",
+			Usage: "language for the app",
+		},
+		&cli.StringFlag{
+			Name:  "config, c",
+			Usage: "load configuration from `FILE`",
+		},
+	}
+
+	app.Commands = []*cli.Command{}
+	app.Commands = append(app.Commands, &cmd.ArchCMD)
+	app.Commands = append(app.Commands, &cmd.UNameCMD)
+	sort.Sort(cli.CommandsByName(app.Commands))
+	sort.Sort(cli.FlagsByName(app.Flags))
+	err := app.Run(os.Args)
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+
+func main() {
+	Setup()
+}
