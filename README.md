@@ -4,7 +4,7 @@
 # core
 
 
-![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)
+![License](https://img.shields.io/badge/license-GPL3.0-brightgreen.svg?style=flat-square)
 ![Go Report Card](https://goreportcard.com/badge/github.com/TaceyWong/core)
 
 Golang Implement of Coreutils (git://git.sv.gnu.org/coreutils)
