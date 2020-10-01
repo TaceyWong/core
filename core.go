@@ -49,6 +49,7 @@ func Setup() {
 	app.Commands = append(app.Commands, &cmd.FalseCMD)
 	app.Commands = append(app.Commands, &cmd.YesCMD)
 	app.Commands = append(app.Commands, &cmd.HostnameCMD)
+	app.Commands = append(app.Commands, &cmd.HostidCMD)
 	sort.Sort(cli.CommandsByName(app.Commands))
 	sort.Sort(cli.FlagsByName(app.Flags))
 	err := app.Run(os.Args)
