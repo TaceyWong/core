@@ -154,8 +154,8 @@ Golang Implement of Coreutils (git://git.sv.gnu.org/coreutils)
 + [x] `arch`:  print machine hardware name (same as uname -m)
 + [ ] `nproc`: print the number of processing units available
 + [x] `uname`: print system information
-+ [ ] `hostname`: show or set the system's host name
-+ [ ] `hostid`:  print the numeric identifier for the current host
++ [x] `hostname`: show or set the system's host name
++ [x] `hostid`:  print the numeric identifier for the current host
 + [ ] `uptime`: Tell how long the system has been running
 
 
