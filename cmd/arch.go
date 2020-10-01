@@ -13,7 +13,7 @@ var ArchCMDVersion = "v0.0.1"
 // ArchCMD define arch cli command
 var ArchCMD = cli.Command{
 	Name:    "arch",
-	Aliases: []string{"machine_arch"},
+	Aliases: []string{"ARCH"},
 	Usage:   "print machine hardware name (same as uname -m)",
 	Flags: []cli.Flag{
 		&cli.BoolFlag{

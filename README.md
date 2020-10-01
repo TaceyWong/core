@@ -111,12 +111,12 @@ Golang Implement of Coreutils (git://git.sv.gnu.org/coreutils)
 
 + [ ] `echo`:  display a line of text
 + [ ] `printf`: format and print data
-+ [ ] `yes`: output a string repeatedly until killed
++ [x] `yes`: output a string repeatedly until killed
 
 **Conditions**
 
-+ [ ] `false`: do nothing, unsuccessfully
-+ [ ] `true`: do nothing, successfully
++ [x] `false`: do nothing, unsuccessfully
++ [x] `true`: do nothing, successfully
 + [ ] `test`:  check file types and compare values
 + [ ] `expr`:  evaluate expressions
 
@@ -151,9 +151,9 @@ Golang Implement of Coreutils (git://git.sv.gnu.org/coreutils)
 **System context**
 
 + [ ] `date`: print or set the system date and time
-+ [ ] `arch`:  print machine hardware name (same as uname -m)
++ [x] `arch`:  print machine hardware name (same as uname -m)
 + [ ] `nproc`: print the number of processing units available
-+ [ ] `uname`: print system information
++ [x] `uname`: print system information
 + [ ] `hostname`: show or set the system's host name
 + [ ] `hostid`:  print the numeric identifier for the current host
 + [ ] `uptime`: Tell how long the system has been running

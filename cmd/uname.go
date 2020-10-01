@@ -13,7 +13,7 @@ const UNameCMDVersion = "0.0.1"
 // UNameCMD define `uname` cli command
 var UNameCMD = cli.Command{
 	Name:        "uname",
-	Aliases:     []string{""},
+	Aliases:     []string{"UNAME"},
 	Usage:       "print system information",
 	Description: `Print certain system information.  With no OPTION, same as -s.`,
 	Flags: []cli.Flag{
