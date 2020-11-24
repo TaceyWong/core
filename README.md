@@ -19,7 +19,7 @@ Golang Implement of Coreutils (git://git.sv.gnu.org/coreutils)
 + [ ] `tac`: concatenate and print files in reverse 
 + [ ] `nl`:  number lines of files
 + [ ] `od`: dump files in octal and other formats
-+ [ ] `base32`: base32 encode/decode data and print to standard output
++ [x] `base32`: base32 encode/decode data and print to standard output
 + [x] `base64`: base64 encode/decode data and print to standard output
 + [ ] `basenc`: 
 

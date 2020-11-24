@@ -44,6 +44,7 @@ func Setup() {
 
 	app.Commands = []*cli.Command{}
 	app.Commands = append(app.Commands, &cmd.ArchCMD)
+	app.Commands = append(app.Commands, &cmd.Base32CMD)
 	app.Commands = append(app.Commands, &cmd.Base64CMD)
 	app.Commands = append(app.Commands, &cmd.BaseNameCMD)
 	app.Commands = append(app.Commands, &cmd.CatCMD)
