@@ -52,6 +52,7 @@ func Setup() {
 	app.Commands = append(app.Commands, &cmd.YesCMD)
 	app.Commands = append(app.Commands, &cmd.HostnameCMD)
 	app.Commands = append(app.Commands, &cmd.HostidCMD)
+	app.Commands = append(app.Commands, &cmd.UptimeCMD)
 	app.Commands = append(app.Commands, &cmd.MkTempCMD)
 	sort.Sort(cli.CommandsByName(app.Commands))
 	sort.Sort(cli.FlagsByName(app.Flags))

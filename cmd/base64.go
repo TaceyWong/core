@@ -64,7 +64,7 @@ func base64Action(c *cli.Context) error {
 	}
 	if c.Bool("decode") {
 		decodeBytes, err := base64.StdEncoding.DecodeString(string(f))
-		if err !=nil{
+		if err != nil {
 			log.Fatalln(err)
 		}
 		println(string(decodeBytes))
