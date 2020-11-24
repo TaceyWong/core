@@ -20,7 +20,7 @@ Golang Implement of Coreutils (git://git.sv.gnu.org/coreutils)
 + [ ] `nl`:  number lines of files
 + [ ] `od`: dump files in octal and other formats
 + [ ] `base32`: base32 encode/decode data and print to standard output
-+ [ ] `base64`: base64 encode/decode data and print to standard output
++ [x] `base64`: base64 encode/decode data and print to standard output
 + [ ] `basenc`: 
 
 **Formatting file contents**
@@ -126,7 +126,7 @@ Golang Implement of Coreutils (git://git.sv.gnu.org/coreutils)
 
 **File name manipulation**
 
-+ [ ] `basename`: strip directory and suffix from filenames
++ [x] `basename`: strip directory and suffix from filenames
 + [ ] `dirname`: strip last component from file name
 + [ ] `pathchk`: check whether file names are valid or portable
 + [ ] `mktemp`: create a temporary file or directory
