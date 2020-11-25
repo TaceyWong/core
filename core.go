@@ -61,6 +61,8 @@ func Setup() {
 	app.Commands = append(app.Commands, &cmd.HostidCMD)
 	app.Commands = append(app.Commands, &cmd.UptimeCMD)
 	app.Commands = append(app.Commands, &cmd.MkTempCMD)
+	app.Commands = append(app.Commands, &cmd.PrintEnvCMD)
+
 	sort.Sort(cli.CommandsByName(app.Commands))
 	sort.Sort(cli.FlagsByName(app.Flags))
 	err := app.Run(os.Args)
