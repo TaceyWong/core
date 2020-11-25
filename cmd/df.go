@@ -83,7 +83,7 @@ var DfCMD = cli.Command{
 
 func dfAction(c *cli.Context) error {
 	if c.Bool("version") {
-		fmt.Println(c.Command.Name, ArchCMDVersion)
+		fmt.Println(c.Command.Name, DfCMDVersion)
 		return nil
 	}
 	return nil

@@ -144,7 +144,7 @@ var DuCMD = cli.Command{
 
 func duAction(c *cli.Context) error {
 	if c.Bool("version") {
-		fmt.Println(c.Command.Name, ArchCMDVersion)
+		fmt.Println(c.Command.Name, DuCMDVersion)
 		return nil
 	}
 	return nil
