@@ -13,7 +13,7 @@ import (
 // Base64CMDVersion base64 version no
 var Base64CMDVersion = "v0.0.1"
 
-// Base84CMD define base64 cli command
+// Base64CMD define base64 cli command
 var Base64CMD = cli.Command{
 	Name:    "base64",
 	Aliases: []string{"BASE64"},
