@@ -48,6 +48,7 @@ func Setup() {
 	app.Commands = append(app.Commands, &cmd.Base64CMD)
 	app.Commands = append(app.Commands, &cmd.BaseNameCMD)
 	app.Commands = append(app.Commands, &cmd.CatCMD)
+	app.Commands = append(app.Commands, &cmd.DfCMD)
 	app.Commands = append(app.Commands, &cmd.NlCMD)
 	app.Commands = append(app.Commands, &cmd.UNameCMD)
 	app.Commands = append(app.Commands, &cmd.SeqCMD)
