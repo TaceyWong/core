@@ -69,6 +69,7 @@ func Setup() {
 	app.Commands = append(app.Commands, &cmd.MkTempCMD)
 	app.Commands = append(app.Commands, &cmd.PrintEnvCMD)
 	app.Commands = append(app.Commands, &cmd.LogNameCMD)
+	app.Commands = append(app.Commands, &cmd.LsCPUCMD)
 	app.Commands = append(app.Commands, &cmd.PWDCMD)
 
 	sort.Sort(cli.CommandsByName(app.Commands))
