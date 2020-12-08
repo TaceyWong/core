@@ -91,6 +91,25 @@ var LsCPUCMD = cli.Command{
 	Action: lsCPUAction,
 }
 
+
+type CPUInfo struct{
+	CPU int32 
+	CORE int32
+    SOCKET  int32
+    NODE  int32
+    BOOK  int32
+    DRAWER  int32
+    CACHE  string
+  	POLARIZATION  string
+    ADDRESS  string
+    CONFIGURED  []int
+    ONLINE  []int
+    MAXMHZ  float64
+    MINMHZ  float64
+}
+
+
+
 func lsCPUAction(c *cli.Context) error {
 	if c.Bool("version") {
 		fmt.Println(c.Command.Name, EnvCMDVersion)
