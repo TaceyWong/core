@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"sort"
@@ -10,6 +11,17 @@ import (
 
 	"github.com/urfave/cli/v2"
 )
+
+var logo = `
+   ______   ____     ____     ______
+  / ____/  / __ \   / __ \   / ____/
+ / /      / / / /  / /_/ /  / __/
+/ /___   / /_/ /  / _, _/  / /___
+\____/   \____/  /_/ |_|  /_____/
+
+Please type "ctools -h/--help" for the help of usage
+
+`
 
 // Setup the main-in of Core
 func Setup() {
@@ -109,6 +121,10 @@ func Setup() {
 		&cmd.TruncateCMD,
 		&cmd.TSortCMD,
 		&cmd.ShredCMD,
+	}
+	app.Action = func(c *cli.Context) error {
+		fmt.Print(logo)
+		return nil
 	}
 	sort.Sort(cli.CommandsByName(app.Commands))
 	sort.Sort(cli.FlagsByName(app.Flags))
