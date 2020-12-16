@@ -13,8 +13,9 @@ var TouchCMDVersion = "v0.0.1"
 var TouchCMD = cli.Command{
 	Name:    "touch",
 	Aliases: []string{"TOUCH"},
-	Usage:   `Update the access and modification times of each FILE to the current time.`,
-	Description: `A FILE argument that does not exist is created empty, unless -c or -h
+	Usage:   `change file timestamps`,
+	Description: `Update the access and modification times of each FILE to the current time.
+	A FILE argument that does not exist is created empty, unless -c or -h
 	is supplied.
 	
 	A FILE argument string of - is handled specially and causes touch to

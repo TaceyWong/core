@@ -42,36 +42,74 @@ func Setup() {
 		},
 	}
 
-	app.Commands = []*cli.Command{}
-	app.Commands = append(app.Commands, &cmd.ArchCMD)
-	app.Commands = append(app.Commands, &cmd.Base32CMD)
-	app.Commands = append(app.Commands, &cmd.Base64CMD)
-	app.Commands = append(app.Commands, &cmd.BaseNameCMD)
-	app.Commands = append(app.Commands, &cmd.CatCMD)
-	app.Commands = append(app.Commands, &cmd.DfCMD)
-	app.Commands = append(app.Commands, &cmd.DuCMD)
-	app.Commands = append(app.Commands, &cmd.EnvCMD)
-	app.Commands = append(app.Commands, &cmd.GroupsCMD)
-	app.Commands = append(app.Commands, &cmd.NlCMD)
-	app.Commands = append(app.Commands, &cmd.UNameCMD)
-	app.Commands = append(app.Commands, &cmd.SeqCMD)
-	app.Commands = append(app.Commands, &cmd.StatCMD)
-	app.Commands = append(app.Commands, &cmd.TouchCMD)
-	app.Commands = append(app.Commands, &cmd.TrueCMD)
-	app.Commands = append(app.Commands, &cmd.TtyCMD)
-	app.Commands = append(app.Commands, &cmd.FalseCMD)
-	app.Commands = append(app.Commands, &cmd.YesCMD)
-	app.Commands = append(app.Commands, &cmd.HostnameCMD)
-	app.Commands = append(app.Commands, &cmd.HostidCMD)
-	app.Commands = append(app.Commands, &cmd.IDCMD)
-	app.Commands = append(app.Commands, &cmd.UsersCMD)
-	app.Commands = append(app.Commands, &cmd.UptimeCMD)
-	app.Commands = append(app.Commands, &cmd.MkTempCMD)
-	app.Commands = append(app.Commands, &cmd.PrintEnvCMD)
-	app.Commands = append(app.Commands, &cmd.LogNameCMD)
-	app.Commands = append(app.Commands, &cmd.LsCPUCMD)
-	app.Commands = append(app.Commands, &cmd.PWDCMD)
-
+	app.Commands = []*cli.Command{
+		&cmd.ArchCMD,
+		&cmd.Base32CMD,
+		&cmd.Base64CMD,
+		&cmd.BaseNameCMD,
+		&cmd.CatCMD,
+		&cmd.DfCMD,
+		&cmd.DuCMD,
+		&cmd.EnvCMD,
+		&cmd.GroupsCMD,
+		&cmd.NlCMD,
+		&cmd.UNameCMD,
+		&cmd.SeqCMD,
+		&cmd.StatCMD,
+		&cmd.TouchCMD,
+		&cmd.TrueCMD,
+		&cmd.TtyCMD,
+		&cmd.FalseCMD,
+		&cmd.YesCMD,
+		&cmd.HostnameCMD,
+		&cmd.HostidCMD,
+		&cmd.IDCMD,
+		&cmd.UsersCMD,
+		&cmd.UptimeCMD,
+		&cmd.MkTempCMD,
+		&cmd.PrintEnvCMD,
+		&cmd.LogNameCMD,
+		&cmd.LsCPUCMD,
+		&cmd.PWDCMD,
+		&cmd.RMCMD,
+		&cmd.CPCMD,
+		&cmd.TailCMD,
+		&cmd.MVCMD,
+		&cmd.CommCMD,
+		&cmd.ExpandCMD,
+		&cmd.UnExpandCMD,
+		&cmd.ChGrpCMD,
+		&cmd.ChOwnCMD,
+		&cmd.ChRootCMD,
+		&cmd.CkSumCMD,
+		&cmd.CSplitCMD,
+		&cmd.CutCMD,
+		&cmd.DateCMD,
+		&cmd.DDCMD,
+		&cmd.DirNameCMD,
+		&cmd.ExprCMD,
+		&cmd.FactorCMD,
+		&cmd.HeadCMD,
+		&cmd.JoinCMD,
+		&cmd.NiceCMD,
+		&cmd.NProcCMD,
+		&cmd.NumFmtCMD,
+		&cmd.PasteCMD,
+		&cmd.PathChkCMD,
+		&cmd.PtxCMD,
+		&cmd.RealPathCMD,
+		&cmd.ShufCMD,
+		&cmd.SortCMD,
+		&cmd.SplitCMD,
+		&cmd.SyncCMD,
+		&cmd.TeeCMD,
+		&cmd.TestCMD,
+		&cmd.TimeoutCMD,
+		&cmd.TrCMD,
+		&cmd.TruncateCMD,
+		&cmd.TSortCMD,
+		&cmd.ShredCMD,
+	}
 	sort.Sort(cli.CommandsByName(app.Commands))
 	sort.Sort(cli.FlagsByName(app.Flags))
 	err := app.Run(os.Args)
