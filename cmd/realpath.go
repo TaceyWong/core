@@ -13,7 +13,7 @@ const RealPathCMDVersion = "0.0.1"
 var RealPathCMD = cli.Command{
 	Name:    "realpath",
 	Aliases: []string{"REALPATH"},
-	Usage:   "print the resolved path",
+	Usage:   "打印已解析的路径[绝对地址]",
 	Description: `Print the resolved absolute file name;
 	all but the last component must exist`,
 	Flags: []cli.Flag{

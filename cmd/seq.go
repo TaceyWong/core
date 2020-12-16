@@ -13,8 +13,9 @@ var SeqCMDVersion = "v0.0.1"
 var SeqCMD = cli.Command{
 	Name:    "seq",
 	Aliases: []string{"SEQ"},
-	Usage:   "Print numbers from FIRST to LAST, in steps of INCREMENT.",
-	Description: `If FIRST or INCREMENT is omitted, it defaults to 1.  That is, an
+	Usage:   "打印数字序列",
+	Description: `Print numbers from FIRST to LAST, in steps of INCREMENT.
+	If FIRST or INCREMENT is omitted, it defaults to 1.  That is, an
 	omitted INCREMENT defaults to 1 even when LAST is smaller than FIRST.
 	The sequence of numbers ends when the sum of the current number and
 	INCREMENT would become greater than LAST.

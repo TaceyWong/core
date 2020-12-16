@@ -17,7 +17,7 @@ var Base32CMDVersion = "v0.0.1"
 var Base32CMD = cli.Command{
 	Name:    "base32",
 	Aliases: []string{"BASE32"},
-	Usage:   "encode or decode FILE, or standard input, to standard output using Base32",
+	Usage:   "base32编码/解码数据并打印到标准输出",
 	Flags: []cli.Flag{
 		&cli.BoolFlag{
 			Name:    "version",

@@ -13,7 +13,7 @@ var PWDCMDVersion = "v0.0.1"
 var PWDCMD = cli.Command{
 	Name:      "pwd",
 	Aliases:   []string{"PWD"},
-	Usage:     `print name of current/working directory`,
+	Usage:     `打印当前/工作目录名称`,
 	UsageText: `core pwd [command options]`,
 	Flags: []cli.Flag{
 		&cli.BoolFlag{

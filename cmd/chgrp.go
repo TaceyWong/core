@@ -13,7 +13,7 @@ const ChGrpCMDVersion = "0.0.1"
 var ChGrpCMD = cli.Command{
 	Name:    "chgrp",
 	Aliases: []string{"CHGRP"},
-	Usage:   "Change the group of each FILE to GROUP.",
+	Usage:   "更改组所有权",
 	Description: `Change the group of each FILE to GROUP.
 	With --reference, change the group of each FILE to that of RFILE.
 	

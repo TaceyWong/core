@@ -14,7 +14,7 @@ var ArchCMDVersion = "v0.0.1"
 var ArchCMD = cli.Command{
 	Name:    "arch",
 	Aliases: []string{"ARCH"},
-	Usage:   "print machine hardware name (same as uname -m)",
+	Usage:   "打印机器硬件名称 (同 uname -m)",
 	Flags: []cli.Flag{
 		&cli.BoolFlag{
 			Name:    "version",
@@ -22,10 +22,10 @@ var ArchCMD = cli.Command{
 			Usage:   "output version information and exit",
 		},
 	},
-	Action: arch,
+	Action: archAction,
 }
 
-func arch(c *cli.Context) error {
+func archAction(c *cli.Context) error {
 	if c.Bool("version") {
 		fmt.Println(c.Command.Name, ArchCMDVersion)
 		return nil

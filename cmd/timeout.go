@@ -13,7 +13,7 @@ const TimeoutCMDVersion = "0.0.1"
 var TimeoutCMD = cli.Command{
 	Name:    "timeout",
 	Aliases: []string{"TIMEOUT"},
-	Usage:   "run a command with a time limit",
+	Usage:   "有时间限制地运行命令",
 	Description: `DURATION is a floating point number with an optional suffix:
 	's' for seconds (the default), 'm' for minutes, 'h' for hours or 'd' for days.
 	

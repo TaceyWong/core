@@ -13,9 +13,10 @@ const UniqCMDVersion = "0.0.1"
 var UniqCMD = cli.Command{
 	Name:    "uniq",
 	Aliases: []string{"UNIQ"},
-	Usage: `Filter adjacent matching lines from INPUT (or standard input),
-	writing to OUTPUT (or standard output)`,
-	Description: `Note: 'uniq' does not detect repeated lines unless they are adjacent.
+	Usage:   `报告或省略重复的行`,
+	Description: `Filter adjacent matching lines from INPUT (or standard input),
+	writing to OUTPUT (or standard output)
+	Note: 'uniq' does not detect repeated lines unless they are adjacent.
 	You may want to sort the input first, or use 'sort -u' without 'uniq'.
 	Also, comparisons honor the rules specified by 'LC_COLLATE'.`,
 	Flags: []cli.Flag{

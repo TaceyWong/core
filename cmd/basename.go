@@ -15,7 +15,7 @@ var BaseNameCMDVersion = "v0.0.1"
 var BaseNameCMD = cli.Command{
 	Name:    "basename",
 	Aliases: []string{"BASENAME"},
-	Usage:   "Print NAME with any leading directory components removed.",
+	Usage:   "移除文件名的目录和后缀",
 	Flags: []cli.Flag{
 		&cli.BoolFlag{
 			Name:    "version",

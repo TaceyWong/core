@@ -17,7 +17,7 @@ var Base64CMDVersion = "v0.0.1"
 var Base64CMD = cli.Command{
 	Name:    "base64",
 	Aliases: []string{"BASE64"},
-	Usage:   "encode or decode FILE, or standard input, to standard output",
+	Usage:   "base64编码/解码数据并打印到标准输出",
 	Flags: []cli.Flag{
 		&cli.BoolFlag{
 			Name:    "version",

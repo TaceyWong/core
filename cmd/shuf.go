@@ -13,7 +13,7 @@ const ShufCMDVersion = "0.0.1"
 var ShufCMD = cli.Command{
 	Name:    "shuf",
 	Aliases: []string{"SHUF"},
-	Usage:   "generate random permutations",
+	Usage:   "生成随机排列",
 	Description: `Write a random permutation of the input lines to standard output.
 
 	如果没有指定文件，或者文件为"-"，则从标准输入读取。`,

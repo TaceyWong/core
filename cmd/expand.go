@@ -13,7 +13,7 @@ const ExpandCMDVersion = "0.0.1"
 var ExpandCMD = cli.Command{
 	Name:    "expand",
 	Aliases: []string{"EXPAND"},
-	Usage:   "convert spaces to tabs",
+	Usage:   "制表符转换为空格",
 	Description: `Convert tabs in each FILE to spaces, writing to standard output.
 	如果没有指定文件，或者文件为"-"，则从标准输入读取。`,
 	Flags: []cli.Flag{

@@ -11,10 +11,11 @@ var EnvCMDVersion = "v0.0.1"
 
 // EnvCMD define env cli command
 var EnvCMD = cli.Command{
-	Name:        "env",
-	Aliases:     []string{"ENV"},
-	Usage:       "Set each NAME to VALUE in the environment and run COMMAND",
-	Description: `单纯的 - 意味着 -i。如果没有命令，则打印结果环境。`,
+	Name:    "env",
+	Aliases: []string{"ENV"},
+	Usage:   "在修改后的环境中运行程序",
+	Description: `Set each NAME to VALUE in the environment and run COMMAND
+	单纯的 - 意味着 -i。如果没有命令，则打印结果环境。`,
 	Flags: []cli.Flag{
 		&cli.BoolFlag{
 			Name:    "version",

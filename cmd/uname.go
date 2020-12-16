@@ -14,7 +14,7 @@ const UNameCMDVersion = "0.0.1"
 var UNameCMD = cli.Command{
 	Name:        "uname",
 	Aliases:     []string{"UNAME"},
-	Usage:       "print system information",
+	Usage:       "打印系统信息",
 	Description: `Print certain system information.  With no OPTION, same as -s.`,
 	Flags: []cli.Flag{
 		&cli.BoolFlag{

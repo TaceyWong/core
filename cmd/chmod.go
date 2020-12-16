@@ -13,7 +13,7 @@ const ChModCMDVersion = "0.0.1"
 var ChModCMD = cli.Command{
 	Name:    "chmod",
 	Aliases: []string{"CHMOD"},
-	Usage:   "Change the mode of each FILE to MODE.",
+	Usage:   "更改文件模式位",
 	Description: `Change the mode of each FILE to MODE.
 	With --reference, change the mode of each FILE to that of RFILE.
 	

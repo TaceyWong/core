@@ -13,7 +13,7 @@ const DDCMDVersion = "0.0.1"
 var DDCMD = cli.Command{
 	Name:    "dd",
 	Aliases: []string{"DD"},
-	Usage:   "Copy a file, converting and formatting according to the operands.",
+	Usage:   "转换和拷贝文件",
 	Description: `Copy a file, converting and formatting according to the operands.
 
 	bs=BYTES        read and write up to BYTES bytes at a time (default: 512);

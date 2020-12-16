@@ -13,8 +13,9 @@ const DateCMDVersion = "0.0.1"
 var DateCMD = cli.Command{
 	Name:    "date",
 	Aliases: []string{"DATE"},
-	Usage:   "Display the current time in the given FORMAT, or set the system date.",
-	Description: `给定的格式FORMAT 控制着输出，解释序列如下：
+	Usage:   "打印或设置系统日期和时间",
+	Description: `Display the current time in the given FORMAT, or set the system date.
+	给定的格式FORMAT 控制着输出，解释序列如下：
 
 	%%    一个文字的 %
 	%a    当前locale 的星期名缩写(例如： 日，代表星期日)

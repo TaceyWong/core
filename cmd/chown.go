@@ -13,7 +13,7 @@ const ChOwnCMDVersion = "0.0.1"
 var ChOwnCMD = cli.Command{
 	Name:    "chown",
 	Aliases: []string{"CHOWN"},
-	Usage:   "Change the owner and/or group of each FILE to OWNER and/or GROUP.",
+	Usage:   "更改文件所有者和组",
 	Description: `Change the owner and/or group of each FILE to OWNER and/or GROUP.
 	With --reference, change the owner and group of each FILE to those of RFILE.
 	
