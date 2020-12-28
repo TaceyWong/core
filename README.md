@@ -11,81 +11,81 @@
 ![License](https://img.shields.io/badge/license-GPL3.0-brightgreen.svg?style=flat-square)
 ![Go Report Card](https://goreportcard.com/badge/github.com/TaceyWong/core)
 
-Golang Implement of Coreutils (git://git.sv.gnu.org/coreutils)
+Coreutils(git://git.sv.gnu.org/coreutils)的Go实现
 
 
 
 ## Main
 
-**Output of entire files**
+**整个文件的输出**
 
-+ [ ] `cat`: concatenate files and print on the standard output
-+ [ ] `tac`: concatenate and print files in reverse 
-+ [ ] `nl`:  number lines of files
++ [ ] `cat`: 连接文件并打印到标准输出
++ [ ] `tac`: 逆向连接文件并打印到标准输出
++ [ ] `nl`:  文件添加行号
 + [ ] `od`: dump files in octal and other formats
-+ [x] `base32`: base32 encode/decode data and print to standard output
-+ [x] `base64`: base64 encode/decode data and print to standard output
++ [x] `base32`: base32 编码/解码 数据并打印到标准输出
++ [x] `base64`: base64 编码/解码 数据并打印到标准输出
 + [ ] `basenc`: 
 
-**Formatting file contents**
+**格式化文件内容**
 
 + [ ] `fm`: `sudo apt install fmtools` : simple optimal text formatter
-+ [ ] `pr`: convert text files for printing
++ [ ] `pr`: 转换文本文件以便于打印
 + [ ] `fold`: wrap each input line to fit in specified width
 
-**Output of parts of files**
+**文件的部分输出**
 
-+ [ ] `head`: output the first part of files
-+ [ ] `tail`: output the last part of files
-+ [ ] `split`: split a file into pieces
++ [ ] `head`: 输出文件开始的部分
++ [ ] `tail`: 输出文件结束的部分
++ [ ] `split`: 文件切片
 + [ ] `csplit`: split a file into sections determined by context lines
 
-**Summarizing files**
+**汇总文件**
 
-+ [ ] `cksum`: checksum and count the bytes in a file
-+ [ ] `b2sum`: compute and check BLAKE2 message digest
-+ [ ] `md5sum`: compute and check MD5 message digest
-+ [ ] `sha1sum`: compute and check SHA1 message digest
-+ [ ] `sha2 utilties`: 
++ [ ] `cksum`: 校验和计算文件中的字节数
++ [ ] `b2sum`: 计算并校验BLAKE2
++ [ ] `md5sum`: 计算并校验MD5
++ [ ] `sha1sum`: 计算并校验SHA1
++ [ ] `sha2 utilties`:
 
-**Operating on sorted files**
+**对已排序文件进行操作**
 
-+ [ ] `sort`: sort lines of text files
-+ [ ] `shuf`: generate random permutations
-+ [ ] `uniq`: report or omit repeated lines
-+ [ ] `comm`: compare two sorted files line by line
-+ [ ] `ptx`: produce a permuted index of file contents
-+ [ ] `tsort`: perform topological sort
++ [ ] `sort`: 文本文件按行排序
++ [ ] `shuf`: 生成随机排列
++ [ ] `uniq`: 移除重复的行
++ [ ] `comm`: 逐行比对两个已经排序的文件
++ [ ] `ptx`: 生成文件内容的排列索引
++ [ ] `tsort`: 执行拓扑排序
 
-**Operating on fields**
+**文本字段操作**
 
-+ [ ] `cut`: remove sections from each line of files
-+ [ ] `paste`: merge lines of files
-+ [ ] `join`: join lines of two files on a common field
++ [ ] `cut`: 从文件的每一行中删除部分
++ [ ] `paste`: 合并文件行
++ [ ] `join`: 在一个公共字段上连接两个文件的行
 
-**Operating on characters**
+**字符操作**
 
 + [ ] `tr`: translate or delete characters
-+ [ ] `expand`: convert tabs to spaces
-+ [ ] `unexpand`:  convert spaces to tabs
++ [ ] `expand`: 制表转换为空格
++ [ ] `unexpand`:  空格转换为制表
 
-**Directory listing**
+**目录列表**
 
-+ [ ] `ls`: list directory contents
-+ [ ] `dir`: list directory contents
-+ [ ] `vdir`:  list directory contents
++ [ ] `ls`: 列出目录清单
++ [ ] `dir`: 列出目录清单
++ [ ] `vdir`:  列出目录清单
 + [ ] `dircolors`: color setup for ls
 
-**Basic operations**
+**基础操作**
 
-+ [ ] `cp`: copy files and directories
-+ [ ] `dd`: convert and copy a file
-+ [ ] `install`:  copy files and set attributes
-+ [ ] `mv`:  move (rename) files
-+ [ ] `rm`: remove files or directories
++ [ ] `cp`: 拷贝文件和目录
++ [ ] `dd`: 转换和拷贝一个文件
++ [ ] `install`:  拷贝文件和设置属性
++ [ ] `mv`:  移动和重命名文件
++ [ ] `rm`: 删除文件或目录
 + [ ] `shred`:  overwrite a file to hide its contents, and optionally delete it
 
-**Special file types**
+**特殊文件类型**
 
 + [ ] `link`: call the link function to create a link to a file
 + [ ] `ln`:  make links between files
@@ -93,82 +93,82 @@ Golang Implement of Coreutils (git://git.sv.gnu.org/coreutils)
 + [ ] `mkfifo`: make FIFOs (named pipes)
 + [ ] `mknod`:  make block or character special files
 + [ ] `readlink`: print resolved symbolic links or canonical file names
-+ [ ] `rmdir`: remove empty directories
++ [ ] `rmdir`: 移除空目录
 + [ ] `unlink`: call the unlink function to remove the specified file
 
-**Changing file attributes**
+**更改文件属性**
 
 + [ ] `chown`: change file owner and group
 + [ ] `chgrp`: change group ownership
-+ [ ] `chmod`:  change file mode bits
-+ [ ] `touch`: change file timestamps
++ [ ] `chmod`:  更改文件模式位
++ [ ] `touch`: 更改文件时间戳
 
 **Disk usage**
 
-+ [ ] `df`: report file system disk space usage
-+ [ ] `du`:  estimate file space usage
-+ [ ] `stat`: display file or file system status
-+ [ ] `sync`: Synchronize cached writes to persistent storage
++ [ ] `df`: 报告文件系统磁盘空间使用情况
++ [ ] `du`:  评估文件空间使用情况
++ [ ] `stat`: 显示文件或文件系统状态
++ [ ] `sync`: 同步缓存写到持久存储
 + [ ] `truncate`: shrink or extend the size of a file to the specified size 
 
-**Print Text**
+**打印文本**
 
 + [ ] `echo`:  display a line of text
 + [ ] `printf`: format and print data
 + [x] `yes`: output a string repeatedly until killed
 
-**Conditions**
+**条件**
 
 + [x] `false`: do nothing, unsuccessfully
 + [x] `true`: do nothing, successfully
 + [ ] `test`:  check file types and compare values
 + [ ] `expr`:  evaluate expressions
 
-**Redirection**
+**重导**
 
 + [ ] `tee`:  read from standard input and write to standard output and files
 
-**File name manipulation**
+**文件名操作**
 
-+ [x] `basename`: strip directory and suffix from filenames
-+ [ ] `dirname`: strip last component from file name
++ [x] `basename`: 从文件名中删除目录和后缀
++ [ ] `dirname`: 从文件名中删除最后一部分
 + [ ] `pathchk`: check whether file names are valid or portable
-+ [ ] `mktemp`: create a temporary file or directory
++ [ ] `mktemp`: 创建一个临时文件或文件夹
 + [ ] `realpath`: print the resolved path
 
-**Working context**
+**工作上下文**
 
 + [ ] `pwd`:  print name of current/working directory
 + [ ] `stty`:  change and print terminal line settings
 + [ ] `printenv`:  print all or part of environment
 + [ ] `tty`:  print the file name of the terminal connected to standard input
 
-**User information**
+**用户信息**
 
 + [ ] `id`: print real and effective user and group IDs
-+ [ ] `logname`: print user´s login name
-+ [ ] `whoami`:  print effective userid
-+ [ ] `groups`: print the groups a user is in
++ [ ] `logname`: 打印用户的登录名
++ [ ] `whoami`:  打印有效的用户标识
++ [ ] `groups`: 打印用户所在的群组
 + [ ] `users`: - print the user names of users currently logged in to the current host
-+ [ ] `who`: show who is logged on
++ [ ] `who`: 显示谁登录了系统
 
-**System context**
+**系统上下文**
 
-+ [ ] `date`: print or set the system date and time
-+ [x] `arch`:  print machine hardware name (same as uname -m)
++ [ ] `date`: 显示和设置系统日期和时间
++ [x] `arch`:  打印机器硬件名称 (和`uname -m`相同)
 + [ ] `nproc`: print the number of processing units available
 + [x] `uname`: print system information
 + [x] `hostname`: show or set the system's host name
 + [x] `hostid`:  print the numeric identifier for the current host
-+ [x] `uptime`: Tell how long the system has been running
++ [x] `uptime`: 显示系统已经运行的时长
 
 
-**SELinux context**
+**SELinux 上下文**
 
-+ [ ] `chcon`: change file security context
++ [ ] `chcon`: 改变文件安全上下文
 + [ ] `runcon`: run command with specified security context
 
-**Modified command ivocation**
+**修改命令调用**
 
 + [ ] `chroot`:run command or interactive shell with special root directory
 + [ ] `env`: run a program in a modified environment
@@ -177,23 +177,23 @@ Golang Implement of Coreutils (git://git.sv.gnu.org/coreutils)
 + [ ] `stdbuf`: Run COMMAND, with modified buffering operations for its standard streams.
 + [ ] `timeout`:  run a command with a time limit
 
-**Process control**
+**进程控制**
 
-+ [ ] `kill`: send a signal to a process
++ [ ] `kill`: 给进程发送一个停止运行的信号
 
-**Delaying**
+**延时**
 
-+ [ ] `sleep`:  delay for a specified amount of time
++ [ ] `sleep`:  延迟指定长的时间
 
 
-**Numeric operation**
+**数字操作**
 
 + [ ] `factor`: factor numbers 
 + [ ] `numfmt`: Convert numbers from/to human-readable strings
-+ [ ] `seq`: print a sequence of numbers
++ [ ] `seq`: 打印一个数字序列
 
 
-## References
+## 引用参考
 
 + https://www.gnu.org/software/coreutils/
 + http://www.maizure.org/projects/decoded-gnu-coreutils/
