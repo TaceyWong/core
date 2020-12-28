@@ -1,6 +1,10 @@
 
 ## <font color=red> Just to practice basic system programming, not to use in real world </font>
 
+## <font color=red>For Linux Only,Mac is not</font>
+
+
+
 # core
 
 
