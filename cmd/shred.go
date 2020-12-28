@@ -58,7 +58,7 @@ Ext3 日志模式可通过向/etc/fstab 的挂载选项中添加data=something �
 		&cli.BoolFlag{
 			Name:    "version",
 			Aliases: []string{"v"},
-			Usage:   "output version information and exit",
+			Usage:   "输出版本信息并推出",
 		},
 	},
 	Action: func(c *cli.Context) error {

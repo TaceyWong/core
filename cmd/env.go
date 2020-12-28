@@ -20,7 +20,7 @@ var EnvCMD = cli.Command{
 		&cli.BoolFlag{
 			Name:    "version",
 			Aliases: []string{"v"},
-			Usage:   "output version information and exit",
+			Usage:   "输出版本信息并推出",
 		}, &cli.BoolFlag{
 			Name:    "ignore-environment",
 			Aliases: []string{"i"},

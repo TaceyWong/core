@@ -49,7 +49,7 @@ var LsCPUCMD = cli.Command{
 		&cli.BoolFlag{
 			Name:    "version",
 			Aliases: []string{"v"},
-			Usage:   "output version information and exit",
+			Usage:   "输出版本信息并推出",
 		}, &cli.BoolFlag{
 			Name:    "all",
 			Aliases: []string{"a"},
@@ -91,24 +91,21 @@ var LsCPUCMD = cli.Command{
 	Action: lsCPUAction,
 }
 
-
-type CPUInfo struct{
-	CPU int32 
-	CORE int32
-    SOCKET  int32
-    NODE  int32
-    BOOK  int32
-    DRAWER  int32
-    CACHE  string
-  	POLARIZATION  string
-    ADDRESS  string
-    CONFIGURED  []int
-    ONLINE  []int
-    MAXMHZ  float64
-    MINMHZ  float64
+type CPUInfo struct {
+	CPU          int32
+	CORE         int32
+	SOCKET       int32
+	NODE         int32
+	BOOK         int32
+	DRAWER       int32
+	CACHE        string
+	POLARIZATION string
+	ADDRESS      string
+	CONFIGURED   []int
+	ONLINE       []int
+	MAXMHZ       float64
+	MINMHZ       float64
 }
-
-
 
 func lsCPUAction(c *cli.Context) error {
 	if c.Bool("version") {

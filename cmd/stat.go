@@ -145,7 +145,7 @@ var StatCMD = cli.Command{
 		&cli.BoolFlag{
 			Name:    "version",
 			Aliases: []string{"v"},
-			Usage:   "output version information and exit",
+			Usage:   "输出版本信息并推出",
 		}, &cli.BoolFlag{
 			Name:    "dereference",
 			Aliases: []string{"L"},
@@ -157,7 +157,7 @@ var StatCMD = cli.Command{
 		}, &cli.StringFlag{
 			Name:    "--format",
 			Aliases: []string{"c"},
-			Usage:   `use the specified FORMAT instead of the default;
+			Usage: `use the specified FORMAT instead of the default;
 			output a newline after each use of FORMAT`,
 		}, &cli.StringFlag{
 			Name: "printf",

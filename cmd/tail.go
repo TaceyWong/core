@@ -28,7 +28,7 @@ tail 定期追踪打开给定名称的文件，以确认它是否被删除或被
 		&cli.BoolFlag{
 			Name:    "version",
 			Aliases: []string{"v"},
-			Usage:   "output version information and exit",
+			Usage:   "输出版本信息并推出",
 		},
 	},
 	Action: func(c *cli.Context) error {

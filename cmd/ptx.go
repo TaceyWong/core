@@ -21,7 +21,7 @@ var PtxCMD = cli.Command{
 		&cli.BoolFlag{
 			Name:    "version",
 			Aliases: []string{"v"},
-			Usage:   "output version information and exit",
+			Usage:   "输出版本信息并推出",
 		},
 	},
 	Action: func(c *cli.Context) error {

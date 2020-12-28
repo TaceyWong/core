@@ -33,7 +33,7 @@ var NlCMD = cli.Command{
 		&cli.BoolFlag{
 			Name:    "version",
 			Aliases: []string{"v"},
-			Usage:   "output version information and exit",
+			Usage:   "输出版本信息并推出",
 		}, &cli.StringFlag{
 			Name:    "body-numbering",
 			Aliases: []string{"b"},
@@ -50,31 +50,31 @@ var NlCMD = cli.Command{
 			Name:    "header-numbering",
 			Aliases: []string{"he"},
 			Usage:   "use STYLE for numbering header lines",
-		},&cli.Int64Flag{
+		}, &cli.Int64Flag{
 			Name:    "line-increment",
 			Aliases: []string{"i"},
 			Usage:   "line number increment at each line",
-		},&cli.Int64Flag{
+		}, &cli.Int64Flag{
 			Name:    "join-blank-lines",
 			Aliases: []string{"l"},
 			Usage:   "group of NUMBER empty lines counted as one",
-		},&cli.StringFlag{
+		}, &cli.StringFlag{
 			Name:    "number-format",
 			Aliases: []string{"n"},
 			Usage:   "insert line numbers according to FORMAT",
-		},&cli.BoolFlag{
+		}, &cli.BoolFlag{
 			Name:    "no-renumber",
 			Aliases: []string{"p"},
 			Usage:   "do not reset line numbers for each section",
-		},&cli.StringFlag{
+		}, &cli.StringFlag{
 			Name:    "number-separator",
 			Aliases: []string{"s"},
 			Usage:   "add STRING after (possible) line number",
-		},&cli.Int64Flag{
+		}, &cli.Int64Flag{
 			Name:    "starting-line-number",
 			Aliases: []string{"sl"},
 			Usage:   "first line number for each section",
-		},&cli.Int64Flag{
+		}, &cli.Int64Flag{
 			Name:    "number-width",
 			Aliases: []string{"w"},
 			Usage:   "use NUMBER columns for line numbers",
