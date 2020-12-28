@@ -12,9 +12,10 @@ const FalseCMDVersion = "0.0.1"
 
 // FalseCMD define `false` command
 var FalseCMD = cli.Command{
-	Name:    "false",
-	Aliases: []string{"FALSE"},
-	Usage:   "do nothing, successfully",
+	Name:        "false",
+	Aliases:     []string{"FALSE"},
+	Usage:       "返回布尔False",
+	Description: "遵照IEEE Std 1003.2-1992 (``POSIX.2'') 总以非零退出码退出,",
 	Flags: []cli.Flag{
 		&cli.BoolFlag{
 			Name:    "version",
