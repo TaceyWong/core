@@ -1,7 +1,10 @@
 package cmd
 
 import (
+	"bufio"
+	"errors"
 	"fmt"
+	"os"
 
 	"github.com/urfave/cli/v2"
 )
@@ -88,8 +91,23 @@ func nlAction(c *cli.Context) error {
 		fmt.Println(c.Command.Name, NlCMDVersion)
 		return nil
 	}
-	target := c.Args().Get(0)
-	println(target)
+	if c.Args().Len() == 0 {
+		return errors.New("尚未实现标准输入读取")
+	}
+	for _, p := range c.Args().Slice() {
+		file, err := os.Open(p)
+		if err != nil {
+			return err
+		}
+		scanner := bufio.NewScanner(file)
+		index := 1
+		for scanner.Scan() {
+			fmt.Println(index, scanner.Text())
+			index++
+		}
+		file.Close()
+
+	}
 
 	return nil
 
