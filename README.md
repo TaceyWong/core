@@ -140,7 +140,7 @@ Coreutils(git://git.sv.gnu.org/coreutils)的Go实现
 
 + [ ] `pwd`:  print name of current/working directory
 + [ ] `stty`:  change and print terminal line settings
-+ [ ] `printenv`:  print all or part of environment
++ [x] `printenv`:  print all or part of environment
 + [ ] `tty`:  print the file name of the terminal connected to standard input
 
 **用户信息**
@@ -190,7 +190,7 @@ Coreutils(git://git.sv.gnu.org/coreutils)的Go实现
 
 + [ ] `factor`: factor numbers 
 + [ ] `numfmt`: Convert numbers from/to human-readable strings
-+ [ ] `seq`: 打印一个数字序列
++ [x] `seq`: 打印一个数字序列
 
 
 ## 引用参考
