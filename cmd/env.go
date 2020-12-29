@@ -93,19 +93,19 @@ func envAction(c *cli.Context) (err error) {
 		}
 		chDir = chdir
 	}
-	defer func(cwd string) {
-		recover()
-		os.Chdir(cwd)
-	}(cwd)
+	// defer func(cwd string) {
+	// 	recover()
+	// 	os.Chdir(cwd)
+	// }(cwd)
 	os.Chdir(chDir)
 	// 缺少which操作
-	cmd := exec.Command("bash", "-c", targetCMD)
+	cmd := exec.Command("sh", "-c", targetCMD)
 	// PrintENV("\n")
 	cmd.Env = os.Environ()
 	cmd.Stderr = os.Stderr
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout
-	cmd.Run()
-	return nil
+	err = cmd.Run()
+	return err
 
 }
