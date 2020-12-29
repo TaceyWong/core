@@ -27,6 +27,30 @@ var HeadCMD = cli.Command{
 			Name:    "version",
 			Aliases: []string{"v"},
 			Usage:   "输出版本信息并推出",
+		}, &cli.IntFlag{
+			Name:    "bytes",
+			Aliases: []string{"c"},
+			Usage:   "print the first `NUM` bytes of each file;with the leading '-', print all but the last NUM bytes of each file",
+		}, &cli.IntFlag{
+			Name:    "lines",
+			Aliases: []string{"n"},
+			Usage:   "print the first `NUM` lines instead of the first 10;with the leading '-', print all but the last NUM lines of each file",
+		}, &cli.BoolFlag{
+			Name:    "silent",
+			Aliases: []string{"s"},
+			Usage:   "不显示包含给定文件名的文件头",
+		}, &cli.BoolFlag{
+			Name:    "quiet",
+			Aliases: []string{"q"},
+			Usage:   "和--silen相同",
+		}, &cli.BoolFlag{
+			Name:    "verbose",
+			Aliases: []string{"V"},
+			Usage:   "总是显示包含给定文件名的文件头",
+		}, &cli.BoolFlag{
+			Name:    "zero-terminated",
+			Aliases: []string{"z"},
+			Usage:   "以 NUL 字符而非换行符作为行尾分隔符",
 		},
 	},
 	Action: func(c *cli.Context) error {
