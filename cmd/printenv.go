@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/urfave/cli/v2"
 )
@@ -34,7 +35,14 @@ func printenvAction(c *cli.Context) error {
 		fmt.Println(c.Command.Name, PrintEnvCMDVersion)
 		return nil
 	}
-
+	end := "\n"
+	if c.Bool("0") {
+		end = ""
+	}
+	envs := os.Environ()
+	for _, env := range envs {
+		fmt.Printf("%s%s", env, end)
+	}
 	return nil
 
 }
