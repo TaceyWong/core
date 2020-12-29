@@ -27,18 +27,22 @@ var PrintEnvCMD = cli.Command{
 			Usage:   `end each output line with NUL, not newline`,
 		},
 	},
-	Action: printenvAction,
+	Action: func(c *cli.Context) (err error) {
+		if c.Bool("version") {
+			fmt.Println(c.Command.Name, PrintEnvCMDVersion)
+			return nil
+		}
+		end := "\n"
+		if c.Bool("0") {
+			end = ""
+		}
+		return PrintENV(end)
+	},
 }
 
-func printenvAction(c *cli.Context) error {
-	if c.Bool("version") {
-		fmt.Println(c.Command.Name, PrintEnvCMDVersion)
-		return nil
-	}
-	end := "\n"
-	if c.Bool("0") {
-		end = ""
-	}
+// PrintENV 打印环境变量
+func PrintENV(end string) error {
+
 	envs := os.Environ()
 	for _, env := range envs {
 		fmt.Printf("%s%s", env, end)
