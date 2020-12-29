@@ -19,6 +19,13 @@ var TtyCMD = cli.Command{
 			Name:    "version",
 			Aliases: []string{"v"},
 			Usage:   "输出版本信息并推出",
+		}, &cli.BoolFlag{
+			Name:    "silent",
+			Aliases: []string{"s"},
+			Usage:   "什么也不显示，只返回退出状态值",
+		}, &cli.BoolFlag{
+			Name:  "quiet",
+			Usage: "同--silent",
 		},
 	},
 	Action: ttyAction,

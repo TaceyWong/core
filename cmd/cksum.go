@@ -11,9 +11,10 @@ const CkSumCMDVersion = "0.0.1"
 
 // CkSumCMD define `cksum` cmd
 var CkSumCMD = cli.Command{
-	Name:    "cksum",
-	Aliases: []string{"CKSUM"},
-	Usage:   "输出每个文件的 CRC 校验值和字节统计。",
+	Name:      "cksum",
+	Aliases:   []string{"CKSUM"},
+	UsageText: "core cksum [文件]...\ncore cksum [选项]",
+	Usage:     "输出每个文件的 CRC 校验值和字节统计。",
 	Flags: []cli.Flag{
 		&cli.BoolFlag{
 			Name:    "version",

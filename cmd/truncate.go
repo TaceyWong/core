@@ -31,6 +31,21 @@ var TruncateCMD = cli.Command{
 			Name:    "version",
 			Aliases: []string{"v"},
 			Usage:   "输出版本信息并推出",
+		}, &cli.BoolFlag{
+			Name:    "no-create",
+			Aliases: []string{"c"},
+		}, &cli.BoolFlag{
+			Name:    "io-blocks",
+			Aliases: []string{"o"},
+			Usage:   "将SIZE 视为IO 块数而不使用字节数",
+		}, &cli.PathFlag{
+			Name:    "reference",
+			Aliases: []string{"r"},
+			Usage:   "base size on `RFILE`",
+		}, &cli.IntFlag{
+			Name:    "size",
+			Aliases: []string{"s"},
+			Usage:   "set or adjust the file size by `SIZE` bytes",
 		},
 	},
 	Action: func(c *cli.Context) error {
