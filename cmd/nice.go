@@ -24,6 +24,11 @@ var NiceCMD = cli.Command{
 			Name:    "version",
 			Aliases: []string{"v"},
 			Usage:   "输出版本信息并推出",
+		}, &cli.IntFlag{
+			Name:    "adjustment",
+			Aliases: []string{"n"},
+			Usage:   "add integer `N` to the niceness",
+			Value:   10,
 		},
 	},
 	Action: func(c *cli.Context) error {
