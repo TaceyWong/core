@@ -2,12 +2,19 @@ package cmd
 
 import (
 	"fmt"
+	"strings"
+	"time"
 
 	"github.com/urfave/cli/v2"
 )
 
 // DateCMDVersion date version
 const DateCMDVersion = "0.0.1"
+const layout = "2006年 01月 02日 Monday 15:04:05 CST"
+
+var weekMap = map[string]string{"Monday": "星期一", "Tuesday": "星期二", "Wednesday": "星期三", "Thursday": "星期四",
+	"Friday": "星期五", "Saturday": "星期六", "Sunday": "星期日",
+}
 
 // DateCMD define `date` cmd
 var DateCMD = cli.Command{
@@ -91,6 +98,39 @@ var DateCMD = cli.Command{
 			Name:    "version",
 			Aliases: []string{"v"},
 			Usage:   "输出版本信息并推出",
+		}, &cli.StringFlag{
+			Name:    "date",
+			Aliases: []string{"d"},
+			Usage:   "display time described by `STRING`, not 'now'",
+		}, &cli.BoolFlag{
+			Name:  "debug",
+			Usage: "annotate the parsed date, and warn about questionable usage to stderr",
+		}, &cli.PathFlag{
+			Name:    "file",
+			Aliases: []string{"f"},
+			Usage:   "like --date; once for each line of `DATEFILE`",
+		}, &cli.BoolFlag{
+			Name:    "rfc-email",
+			Aliases: []string{"R"},
+			Usage:   "output date and time in RFC 5322 format. Example: Mon, 14 Aug 2006 02:34:56 -0600",
+		}, &cli.StringFlag{
+			Name:  "rfc-3339",
+			Usage: "output date/time in RFC 3339 format. FMT='date', 'seconds', or 'ns' for date and time to the indicated precision. Example: 2006-08-14 02:34:56-06:00",
+		}, &cli.StringFlag{
+			Name:    "reference",
+			Aliases: []string{"r"},
+			Usage:   "display the last modification time of `FILE`",
+		}, &cli.StringFlag{
+			Name:    "set",
+			Aliases: []string{"s"},
+			Usage:   "set time described by `STRING`",
+		}, &cli.BoolFlag{
+			Name:    "utc",
+			Aliases: []string{"u"},
+			Usage:   "print or set Coordinated Universal Time (UTC)",
+		}, &cli.BoolFlag{
+			Name:  "universal",
+			Usage: "the same as --utc",
 		},
 	},
 	Action: func(c *cli.Context) error {
@@ -98,6 +138,10 @@ var DateCMD = cli.Command{
 			fmt.Println(DateCMDVersion)
 			return nil
 		}
+		t := time.Now()
+		local := t.Format(layout)
+		w := t.Weekday().String()
+		fmt.Println(strings.ReplaceAll(local, w, weekMap[w]))
 		return nil
 	},
 }
