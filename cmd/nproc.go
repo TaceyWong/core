@@ -20,6 +20,12 @@ var NProcCMD = cli.Command{
 			Name:    "version",
 			Aliases: []string{"v"},
 			Usage:   "输出版本信息并推出",
+		}, &cli.BoolFlag{
+			Name:  "all",
+			Usage: "print the number of installed processors",
+		}, &cli.IntFlag{
+			Name:  "ignore",
+			Usage: "if possible, exclude `N` processing units",
 		},
 	},
 	Action: func(c *cli.Context) error {
