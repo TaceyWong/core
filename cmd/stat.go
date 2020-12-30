@@ -1,7 +1,11 @@
 package cmd
 
 import (
+	"errors"
 	"fmt"
+	"os"
+	"syscall"
+	"time"
 
 	"github.com/urfave/cli/v2"
 )
@@ -174,10 +178,43 @@ var StatCMD = cli.Command{
 	Action: statAction,
 }
 
-func statAction(c *cli.Context) error {
+func statAction(c *cli.Context) (err error) {
 	if c.Bool("version") {
 		fmt.Println(c.Command.Name, ArchCMDVersion)
 		return nil
+	}
+	if c.Args().Len() == 0 {
+		return errors.New(" 缺少操作数")
+	}
+	for _, f := range c.Args().Slice() {
+		m, e := os.Stat(f)
+		if e != nil {
+			return fmt.Errorf("无法获取'%s' 的文件状态(stat): 没有那个文件或目录", f)
+		}
+		mtime := m.ModTime()
+		stat := m.Sys().(*syscall.Stat_t)
+		atime := time.Unix(int64(stat.Atim.Sec), int64(stat.Atim.Nsec))
+		ctime := time.Unix(int64(stat.Ctim.Sec), int64(stat.Ctim.Nsec))
+		ftype := "普通文件"
+		if m.IsDir() {
+			ftype = "目录"
+		}
+		fmt.Println("文件:", m.Name())
+		fmt.Println("大小:", m.Size())
+		fmt.Println("块 :", stat.Blocks)
+		fmt.Println("IO 块 :", stat.Blksize)
+		fmt.Println("文件类型 :", ftype)
+		fmt.Println("设备 :", stat.Dev)
+		fmt.Println("Inode :", stat.Ino)
+		fmt.Println("硬链接 :", stat.Nlink)
+		fmt.Println("权限 :", m.Mode())
+		fmt.Println("Uid :", stat.Uid)
+		fmt.Println("Gid :", stat.Gid)
+		fmt.Println("最近访问 :", atime)
+		fmt.Println("最近更改 :", mtime)
+		fmt.Println("最近改动 :", mtime)
+		fmt.Println("创建时间 :", ctime)
+
 	}
 
 	return nil
