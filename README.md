@@ -1,7 +1,7 @@
 
-## <font color=red> Just to practice basic system programming, not to use in real world </font>
+## <font color=red> 只是用来练习基础编程, 不要将其用于真是环境 </font>
 
-## <font color=red>For Linux Only,Mac is not</font>
+## <font color=red>Linux Only,Mac is not</font>
 
 
 
