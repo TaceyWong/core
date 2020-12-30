@@ -30,7 +30,7 @@ func Setup() {
 	app.Version = "0.0.1"
 	app.Compiled = time.Now()
 	app.Authors = []*cli.Author{
-		&cli.Author{
+		{
 			Name:  "Tacey Wong",
 			Email: "xinyong.wang@qq.com",
 		},
