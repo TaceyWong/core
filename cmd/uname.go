@@ -121,6 +121,11 @@ func Uname(c *cli.Context) error {
 		result = fmt.Sprintf("%s %s %s %s %s %s %s %s",
 			u.Sysname, u.Nodename, u.Release, u.Version,
 			u.Machine, u.Machine, u.Machine, u.Sysname)
+		outList = []string{"Operating-System", "NodeName", "Kernel-Release",
+			"Kernel-Version", "Machine", "Processor", "Hardware-Platform",
+			"Operating-System"}
+		outValueList = []string{u.Sysname, u.Nodename, u.Release, u.Version,
+			u.Machine, u.Machine, u.Machine, u.Sysname}
 	} else if flagsNum == 0 {
 		result = u.Sysname
 		outList = append(outList, "Operating-System")
