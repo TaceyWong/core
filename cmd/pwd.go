@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/urfave/cli/v2"
 )
@@ -31,14 +32,17 @@ var PWDCMD = cli.Command{
 			Usage:   `avoid all symlinks`,
 		},
 	},
-	Action: pwdAction,
-}
-
-func pwdAction(c *cli.Context) error {
-	if c.Bool("version") {
-		fmt.Println(c.Command.Name, PWDCMDVersion)
-		return nil
-	}
-	return nil
-
+	Action: func(c *cli.Context) (err error) {
+		if c.Bool("version") {
+			fmt.Println(c.Command.Name, PWDCMDVersion)
+			return nil
+		}
+		if c.Bool("L") {
+			fmt.Println(os.Getenv("PWD"))
+			return err
+		}
+		pwd, err := os.Getwd()
+		fmt.Println(pwd)
+		return err
+	},
 }
