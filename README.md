@@ -1,5 +1,5 @@
 
-## <font color=red> 只是用来练习基础编程, 不要将其用于真是环境 </font>
+## <font color=red> 只是用来练习基础编程, 不要将其用于真实环境 </font>
 
 ## <font color=red>Linux Only,Mac is not</font>
 
