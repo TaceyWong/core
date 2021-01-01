@@ -13,7 +13,16 @@
 
 Coreutils(git://git.sv.gnu.org/coreutils)的Go实现
 
+```sh
 
+   ______   ____     ____     ______
+  / ____/  / __ \   / __ \   / ____/
+ / /      / / / /  / /_/ /  / __/
+/ /___   / /_/ /  / _, _/  / /___
+\____/   \____/  /_/ |_|  /_____/
+
+Please type "ctools -h/--help" for the help of usage
+```
 
 ## Main
 
