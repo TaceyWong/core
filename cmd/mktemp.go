@@ -15,7 +15,7 @@ var MkTempCMDVersion = "v0.0.1"
 var MkTempCMD = cli.Command{
 	Name:    "mktemp",
 	Aliases: []string{"MKTEMP"},
-	Usage:   "create a temporary file or directory",
+	Usage:   "创建临时文件、临时目录",
 	Flags: []cli.Flag{
 		&cli.BoolFlag{
 			Name:    "version",

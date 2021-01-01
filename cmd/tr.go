@@ -13,7 +13,7 @@ const TrCMDVersion = "0.0.1"
 var TrCMD = cli.Command{
 	Name:    "tr",
 	Aliases: []string{"TR"},
-	Usage:   "translate or delete characters",
+	Usage:   "转换或删除字符",
 	Description: `Translate, squeeze, and/or delete characters from standard input,
 	writing to standard output.
 	

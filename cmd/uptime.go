@@ -4,6 +4,7 @@ package cmd
 
 import (
 	"fmt"
+
 	"golang.org/x/sys/unix"
 
 	"github.com/urfave/cli/v2"
@@ -16,7 +17,7 @@ var UptimeCMDVersion = "v0.0.1"
 var UptimeCMD = cli.Command{
 	Name:    "uptime",
 	Aliases: []string{"UPTIME"},
-	Usage:   "Show system up time",
+	Usage:   "显示系统运行了多长时间",
 	Flags: []cli.Flag{
 		&cli.BoolFlag{
 			Name:    "version",

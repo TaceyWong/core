@@ -13,7 +13,7 @@ const SortCMDVersion = "0.0.1"
 var SortCMD = cli.Command{
 	Name:    "sort",
 	Aliases: []string{"SORT"},
-	Usage:   "sort lines of text files",
+	Usage:   "排序文本文件的文本行",
 	Description: `Write sorted concatenation of all FILE(s) to standard output.
 
 	如果没有指定文件，或者文件为"-"，则从标准输入读取。

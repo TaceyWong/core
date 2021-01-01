@@ -13,7 +13,7 @@ const NiceCMDVersion = "0.0.1"
 var NiceCMD = cli.Command{
 	Name:    "nice",
 	Aliases: []string{"NICE"},
-	Usage:   "run a program with modified scheduling priority",
+	Usage:   "修改调度优先级运行程序",
 	Description: `Run COMMAND with an adjusted niceness, which affects process scheduling.
 	With no COMMAND, print the current niceness.  Niceness values range from
 	-20 (most favorable to the process) to 19 (least favorable to the process).

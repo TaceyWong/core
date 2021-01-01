@@ -17,7 +17,7 @@ var StatCMDVersion = "v0.0.1"
 var StatCMD = cli.Command{
 	Name:    "stat",
 	Aliases: []string{"STAT"},
-	Usage:   "Display file or file system status",
+	Usage:   "显示文件或文件系统状态",
 	Description: `The valid format sequences for files (without --file-system):
 
 	%a   access rights in octal (note '#' and '0' printf flags)

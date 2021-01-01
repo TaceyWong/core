@@ -14,7 +14,7 @@ var HostidCMDVersion = "v0.0.1"
 var HostidCMD = cli.Command{
 	Name:    "hostid",
 	Aliases: []string{"HOSTID"},
-	Usage:   "print the numeric identifier for the current host",
+	Usage:   "打印当前主机的数字标识符",
 	Flags: []cli.Flag{
 		&cli.BoolFlag{
 			Name:    "version",

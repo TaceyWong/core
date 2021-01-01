@@ -13,7 +13,7 @@ const TestCMDVersion = "0.0.1"
 var TestCMD = cli.Command{
 	Name:    "test",
 	Aliases: []string{"TEST"},
-	Usage:   "check file types and compare values",
+	Usage:   "检查文件类型并比较值",
 	Flags: []cli.Flag{
 		&cli.BoolFlag{
 			Name:    "version",

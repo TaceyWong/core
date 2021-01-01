@@ -11,10 +11,9 @@ var IDCMDVersion = "v0.0.1"
 
 // IDCMD define id cli command
 var IDCMD = cli.Command{
-	Name:    "id",
-	Aliases: []string{"ID"},
-	Usage: `Print user and group information for the specified USER,
-	or (when USER omitted) for the current user.`,
+	Name:        "id",
+	Aliases:     []string{"ID"},
+	Usage:       `打印指定USER或当前用户（USER省略时）的用户和组信息`,
 	Description: `如果不附带任何选项，程序会显示一些可供识别用户身份的有用信息。`,
 	Flags: []cli.Flag{
 		&cli.BoolFlag{

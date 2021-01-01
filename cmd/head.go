@@ -13,7 +13,7 @@ const HeadCMDVersion = "0.0.1"
 var HeadCMD = cli.Command{
 	Name:    "head",
 	Aliases: []string{"HEAD"},
-	Usage:   "Print the first 10 lines of each FILE to standard output.",
+	Usage:   "打印文本文件的最前10行到标准输出",
 	Description: `Print the first 10 lines of each FILE to standard output.
 	With more than one FILE, precede each with a header giving the file name.
 	

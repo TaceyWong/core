@@ -14,7 +14,7 @@ var SplitCMD = cli.Command{
 	Name:      "split",
 	Aliases:   []string{"SPLIT"},
 	UsageText: "core split [OPTION]... [FILE [PREFIX]]",
-	Usage:     "split a file into pieces",
+	Usage:     "文件分片",
 	Description: `Output pieces of FILE to PREFIXaa, PREFIXab, ...;
 	default size is 1000 lines, and default PREFIX is 'x'.
 	
@@ -68,23 +68,23 @@ CHUNKS may be:
 			Name:  "filter",
 			Usage: "write to shell COMMAND; file name is $FILE",
 		}, &cli.IntFlag{
-			Name: "lines",
+			Name:    "lines",
 			Aliases: []string{"l"},
-			Usage: "put `NUMBER` lines/records per output file",
+			Usage:   "put `NUMBER` lines/records per output file",
 		}, &cli.IntFlag{
-			Name: "numbers",
+			Name:    "numbers",
 			Aliases: []string{"n"},
-			Usage: "generate `CHUNKS` output files; see explanation below",
-		},&cli.StringFlag{
-			Name: "separator",
+			Usage:   "generate `CHUNKS` output files; see explanation below",
+		}, &cli.StringFlag{
+			Name:    "separator",
 			Aliases: []string{"t"},
-			Usage: "use `SEP` instead of newline as the record separator;`\\0` (zero) specifies the NUL character",
-		},&cli.BoolFlag{
-			Name:"unbuffered",
+			Usage:   "use `SEP` instead of newline as the record separator;`\\0` (zero) specifies the NUL character",
+		}, &cli.BoolFlag{
+			Name:    "unbuffered",
 			Aliases: []string{"u"},
-			Usage: "immediately copy input to output with '-n r/...'",
-		},&cli.BoolFlag{
-			Name: "verbose",
+			Usage:   "immediately copy input to output with '-n r/...'",
+		}, &cli.BoolFlag{
+			Name:  "verbose",
 			Usage: "在每个输出文件打开前输出文件特征",
 		},
 	},

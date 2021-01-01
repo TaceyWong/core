@@ -13,7 +13,7 @@ const CutCMDVersion = "0.0.1"
 var CutCMD = cli.Command{
 	Name:        "cut",
 	Aliases:     []string{"CUT"},
-	Usage:       "Print selected parts of lines from each FILE to standard output.",
+	Usage:       "将每个文件中选定行的部分打印到标准输出",
 	Description: `如果没有指定文件，或者文件为"-"，则从标准输入读取`,
 	Flags: []cli.Flag{
 		&cli.BoolFlag{

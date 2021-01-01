@@ -13,7 +13,7 @@ const NumFmtCMDVersion = "0.0.1"
 var NumFmtCMD = cli.Command{
 	Name:    "numfmt",
 	Aliases: []string{"NUMFMT"},
-	Usage:   "Convert numbers from/to human-readable strings",
+	Usage:   "将数字转换为人类可读的字符串",
 	Description: `Reformat NUMBER(s), or the numbers from standard input if none are specified.
 	
 	UNIT options:

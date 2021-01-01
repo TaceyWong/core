@@ -11,10 +11,10 @@ var DfCMDVersion = "v0.0.1"
 
 // DfCMD define df cli command
 var DfCMD = cli.Command{
-	Name:    "df",
-	Aliases: []string{"DF"},
-	Usage: `Show information about the file system on which each FILE resides,
-	or all file systems by default.`,
+	Name:      "df",
+	Aliases:   []string{"DF"},
+	UsageText: "core df [选项]... [文件]...",
+	Usage:     `显示文件系统信息`,
 	Flags: []cli.Flag{
 		&cli.BoolFlag{
 			Name:    "version",
@@ -42,9 +42,6 @@ var DfCMD = cli.Command{
 			Name:    "inodes",
 			Aliases: []string{"i"},
 			Usage:   "显示inode 信息而非块使用量",
-		}, &cli.StringFlag{
-			Name:  "block-size",
-			Usage: "",
 		}, &cli.BoolFlag{
 			Name:    "local",
 			Aliases: []string{"l"},
@@ -86,6 +83,9 @@ func dfAction(c *cli.Context) error {
 		fmt.Println(c.Command.Name, DfCMDVersion)
 		return nil
 	}
+	f := "%10s %10s %10s %10s %10s %10s\n"
+	fmt.Printf(f, "文件系统", "1K-块", "已用", "可用", "已用%", "挂载点")
+	//  syscall.Statfs_t
 	return nil
 
 }

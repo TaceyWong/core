@@ -14,7 +14,7 @@ var CPCMD = cli.Command{
 	Name:      "cp",
 	Aliases:   []string{"CP"},
 	UsageText: "core cp [选项]... [-T] 源文件 目标文件]\ncore cp [选项]... 源文件... 目录\ncore cp [选项]... -t 目录 源文件...",
-	Usage:     "Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.",
+	Usage:     "拷贝复制文件",
 	Description: `默认情况下，源文件的稀疏性仅仅通过简单的方法判断，对应的目标文件目标文件也
 	被为稀疏。这是因为默认情况下使用了--sparse=auto 参数。如果明确使用
 	--sparse=always 参数则不论源文件是否包含足够长的0 序列也将目标文件创文

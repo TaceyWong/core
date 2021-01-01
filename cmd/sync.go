@@ -13,7 +13,7 @@ const SyncCMDVersion = "0.0.1"
 var SyncCMD = cli.Command{
 	Name:    "sync",
 	Aliases: []string{"SYNC"},
-	Usage:   "Synchronize cached writes to persistent storage",
+	Usage:   "同步缓存写到持久存储",
 	Description: `If one or more files are specified, sync only them,
 	or their containing file systems.`,
 	Flags: []cli.Flag{

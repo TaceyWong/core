@@ -13,7 +13,7 @@ const CSplitCMDVersion = "0.0.1"
 var CSplitCMD = cli.Command{
 	Name:    "csplit",
 	Aliases: []string{"CSPLIT"},
-	Usage:   "Output pieces of FILE separated by PATTERN(s) to files 'xx00', 'xx01', ...,",
+	Usage:   "将用PATTERN分隔的FILE输出到文件“ xx00”，“ xx01……",
 	Description: `Output pieces of FILE separated by PATTERN(s) to files 'xx00', 'xx01', ...,
 	and output byte counts of each piece to standard output.
 	

@@ -16,7 +16,7 @@ var DirNameCMD = cli.Command{
 	Name:      "dirname",
 	Aliases:   []string{"DIRNAME"},
 	UsageText: "core dirname [选项] 名称...",
-	Usage:     "Output each NAME with its last non-slash component and trailing slashes removed",
+	Usage:     "输出每个NAME的最后一个非斜杠组成部分，并删除尾随的斜杠",
 	Description: `Output each NAME with its last non-slash component and trailing slashes
 	removed; if NAME contains no /'s, output '.' (meaning the current directory).
 	

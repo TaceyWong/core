@@ -13,7 +13,7 @@ var RMCMDVersion = "v0.0.1"
 var RMCMD = cli.Command{
 	Name:    "rm",
 	Aliases: []string{"RM"},
-	Usage:   "Remove (unlink) the FILE(s).",
+	Usage:   "删除文件",
 	Flags: []cli.Flag{
 		&cli.BoolFlag{
 			Name:    "version",

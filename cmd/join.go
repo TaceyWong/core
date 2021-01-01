@@ -13,7 +13,7 @@ const JoinCMDVersion = "0.0.1"
 var JoinCMD = cli.Command{
 	Name:    "join",
 	Aliases: []string{"JOIN"},
-	Usage:   "join lines of two files on a common field",
+	Usage:   "在一个公共字段上连接两个文件的行",
 	Description: `For each pair of input lines with identical join fields, write a line to
 	standard output.  The default join field is the first, delimited by blanks.
 	

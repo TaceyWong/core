@@ -13,7 +13,7 @@ const PathChkCMDVersion = "0.0.1"
 var PathChkCMD = cli.Command{
 	Name:    "pathchk",
 	Aliases: []string{"PATHCHK"},
-	Usage:   "check whether file names are valid or portable",
+	Usage:   "检查文件名是否有效或可移植",
 	Flags: []cli.Flag{
 		&cli.BoolFlag{
 			Name:    "version",

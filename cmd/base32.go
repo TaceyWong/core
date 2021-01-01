@@ -43,7 +43,7 @@ var Base32CMD = cli.Command{
 
 func base32Action(c *cli.Context) error {
 	if c.Bool("version") {
-		fmt.Println(c.Command.Name, Base64CMDVersion)
+		fmt.Println(c.Command.Name, Base32CMDVersion)
 		return nil
 	}
 	target := c.Args().Get(0)

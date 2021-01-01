@@ -13,7 +13,7 @@ const PtxCMDVersion = "0.0.1"
 var PtxCMD = cli.Command{
 	Name:    "ptx",
 	Aliases: []string{"PTX"},
-	Usage:   "produce a permuted index of file contents",
+	Usage:   "生成文件内容的排列索引",
 	Description: `Output a permuted index, including context, of the words in the input files.
 
 	如果没有指定文件，或者文件为"-"，则从标准输入读取。`,

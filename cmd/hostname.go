@@ -14,7 +14,7 @@ var HostnameCMDVersion = "v0.0.1"
 var HostnameCMD = cli.Command{
 	Name:    "hostname",
 	Aliases: []string{"HOSTNAME"},
-	Usage:   "show or set the system's host name",
+	Usage:   "显示或设置系统主机名",
 	Flags: []cli.Flag{
 		&cli.BoolFlag{
 			Name:    "version",

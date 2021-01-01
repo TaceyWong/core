@@ -13,7 +13,7 @@ const ShredCMDVersion = "0.0.1"
 var ShredCMD = cli.Command{
 	Name:    "shred",
 	Aliases: []string{"SHRED"},
-	Usage:   "overwrite a file to hide its contents, and optionally delete it",
+	Usage:   "覆盖文件以隐藏其内容，并可选择将其删除",
 	Description: `Overwrite the specified FILE(s) repeatedly, in order to make it harder
 	for even very expensive hardware probing to recover the data.
 	

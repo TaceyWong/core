@@ -16,7 +16,7 @@ var NlCMDVersion = "v0.0.1"
 var NlCMD = cli.Command{
 	Name:    "nl",
 	Aliases: []string{"NL"},
-	Usage:   "Write each FILE to standard output, with line numbers added.",
+	Usage:   "文本文件诸行添加数字编号打印到标准输出",
 	Description: `
 	By default, selects -v1 -i1 -l1 -sTAB -w6 -nrn -hn -bt -fn.
 	CC are two delimiter characters used to construct logical page delimiters,

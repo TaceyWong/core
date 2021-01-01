@@ -13,7 +13,7 @@ const YesCMDVersion = "0.0.1"
 var YesCMD = cli.Command{
 	Name:    "yes",
 	Aliases: []string{"YES"},
-	Usage:   "output a string repeatedly until killed",
+	Usage:   "重复输出一个字符串直到被kill",
 	Flags: []cli.Flag{
 		&cli.BoolFlag{
 			Name:    "version",

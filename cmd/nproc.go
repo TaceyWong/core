@@ -13,7 +13,7 @@ const NProcCMDVersion = "0.0.1"
 var NProcCMD = cli.Command{
 	Name:        "nproc",
 	Aliases:     []string{"NPROC"},
-	Usage:       "print the number of processing units available",
+	Usage:       "打印可用的处理器单元数",
 	Description: `此数目可能小于实际工作数`,
 	Flags: []cli.Flag{
 		&cli.BoolFlag{

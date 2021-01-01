@@ -13,7 +13,7 @@ var MVCMDVersion = "v0.0.1"
 var MVCMD = cli.Command{
 	Name:    "mv",
 	Aliases: []string{"MV"},
-	Usage:   "Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.",
+	Usage:   "文件重命名或文件剪切",
 	Description: `The backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.
 	The version control method may be selected via the --backup option or through
 	the VERSION_CONTROL environment variable.  Here are the values:

@@ -13,7 +13,7 @@ const PasteCMDVersion = "0.0.1"
 var PasteCMD = cli.Command{
 	Name:    "paste",
 	Aliases: []string{"PASTE"},
-	Usage:   "merge lines of files",
+	Usage:   "合并文件文本行",
 	Description: `Write lines consisting of the sequentially corresponding lines from
 	each FILE, separated by TABs, to standard output.
 	

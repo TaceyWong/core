@@ -13,7 +13,7 @@ var DuCMDVersion = "v0.0.1"
 var DuCMD = cli.Command{
 	Name:    "du",
 	Aliases: []string{"DU"},
-	Usage:   `Summarize disk usage of the set of FILEs, recursively for directories.`,
+	Usage:   `递归地汇总目录或文件的磁盘使用情况`,
 	Description: `所显示的数值是来自 --block-size、DU_BLOCK_SIZE、BLOCK_SIZE 
 	及 BLOCKSIZE 环境变量中第一个可用的 SIZE 单位。
 	否则，默认单位是 1024 字节(或是 512，若设定 POSIXLY_CORRECT 的话)。

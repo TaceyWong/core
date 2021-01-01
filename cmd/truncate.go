@@ -13,7 +13,7 @@ const TruncateCMDVersion = "0.0.1"
 var TruncateCMD = cli.Command{
 	Name:    "truncate",
 	Aliases: []string{"TRUNCATE"},
-	Usage:   "shrink or extend the size of a file to the specified size",
+	Usage:   "缩小或扩展文件的大小到指定的大小",
 	Description: `A FILE argument that does not exist is created.
 
 	If a FILE is larger than the specified size, the extra data is lost.

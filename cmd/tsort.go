@@ -13,7 +13,7 @@ const TSortCMDVersion = "0.0.1"
 var TSortCMD = cli.Command{
 	Name:    "tsort",
 	Aliases: []string{"TSORT"},
-	Usage:   "perform topological sort",
+	Usage:   "执行拓扑排序",
 	Description: `Write totally ordered list consistent with the partial ordering in FILE.
 
 	如果没有指定文件，或者文件为"-"，则从标准输入读取。`,

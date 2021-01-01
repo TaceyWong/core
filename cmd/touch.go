@@ -18,7 +18,7 @@ var TouchCMD = cli.Command{
 	Name:      "touch",
 	Aliases:   []string{"TOUCH"},
 	UsageText: "core touch [选项]... 文件...",
-	Usage:     `change file timestamps`,
+	Usage:     `更改文件时间戳`,
 	Description: `Update the access and modification times of each FILE to the current time.
 	A FILE argument that does not exist is created empty, unless -c or -h
 	is supplied.

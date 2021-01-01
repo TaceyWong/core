@@ -13,7 +13,7 @@ const TailCMDVersion = "0.0.1"
 var TailCMD = cli.Command{
 	Name:    "tail",
 	Aliases: []string{"TAIL"},
-	Usage:   "Print the last 10 lines of each FILE to standard output",
+	Usage:   "打印文本文件的最后10行到标准输出",
 	Description: `With more than one FILE, precede each with a header giving the file name.
 	如果没有指定文件，或者文件为"-"，则从标准输入读取。
 	
@@ -37,7 +37,7 @@ tail 定期追踪打开给定名称的文件，以确认它是否被删除或被
 			Name:    "follow",
 			Aliases: []string{"f"},
 			Usage:   "output appended data as the file grows'",
-		}, & cli.BoolFlag{
+		}, &cli.BoolFlag{
 			Name:    "follow-at",
 			Aliases: []string{"x"},
 			Usage:   "output appended data as the file grows; an absent option argument means '`descriptor`'",
