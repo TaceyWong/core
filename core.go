@@ -41,19 +41,7 @@ func Setup() {
 	app.Action = func(c *cli.Context) error {
 		return nil
 	}
-
-	app.Flags = []cli.Flag{
-		&cli.StringFlag{
-			Name:  "lang, l",
-			Value: "english",
-			Usage: "language for the app",
-		},
-		&cli.StringFlag{
-			Name:  "config, c",
-			Usage: "load configuration from `FILE`",
-		},
-	}
-
+	app.HideHelpCommand = true
 	app.Commands = []*cli.Command{
 		&cmd.ArchCMD,
 		&cmd.Base32CMD,
