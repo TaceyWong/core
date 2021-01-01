@@ -24,6 +24,97 @@ Coreutils(git://git.sv.gnu.org/coreutils)的Go实现
 Please type "ctools -h/--help" for the help of usage
 ```
 
+```sh
+NAME:
+   core - Clone of GNU Coreutils
+
+USAGE:
+   core [global options] command [command options] [arguments...]
+
+VERSION:
+   0.0.1
+
+AUTHOR:
+   Tacey Wong <xinyong.wang@qq.com>
+
+COMMANDS:
+   arch, ARCH          打印机器硬件名称 (同 uname -m)
+   base32, BASE32      base32编码/解码数据并打印到标准输出
+   base64, BASE64      base64编码/解码数据并打印到标准输出
+   basename, BASENAME  移除文件名的目录和后缀
+   cat, CAT            连接所有指定文件并将结果写到标准输出
+   chgrp, CHGRP        更改组所有权
+   chown, CHOWN        更改文件所有者和组
+   chroot, CHROOT      以指定的新根为运行指定命令时的的根目录。
+   cksum, CKSUM        输出每个文件的 CRC 校验值和字节统计。
+   comm, COMM          逐行比较已排序的文件文件1 和文件2
+   cp, CP              拷贝复制文件
+   csplit, CSPLIT      将用PATTERN分隔的FILE输出到文件“ xx00”，“ xx01……
+   cut, CUT            将每个文件中选定行的部分打印到标准输出
+   date, DATE          打印或设置系统日期和时间
+   dd, DD              转换和拷贝文件
+   df, DF              显示文件系统信息
+   dirname, DIRNAME    输出每个NAME的最后一个非斜杠组成部分，并删除尾随的斜杠
+   du, DU              递归地汇总目录或文件的磁盘使用情况
+   env, ENV            在修改后的环境中运行程序
+   expand, EXPAND      制表符转换为空格
+   expr, EXPR          将表达式的值列印到标准输出，分隔符下面的空行可提升算式优先级。
+   factor, FACTOR      输出每个指定的数字的素因子，如果没有在命令行中指定则从标准输入读取。
+   false, FALSE        返回布尔False
+   groups, GROUPS      显示每个输入的用户名所在的全部组，
+                       如果没有指定用户名则默认为当前进程用户(当用户组数据库发生变更时可能导致差异)。
+   head, HEAD          打印文本文件的最前10行到标准输出
+   hostid, HOSTID      打印当前主机的数字标识符
+   hostname, HOSTNAME  显示或设置系统主机名
+   id, ID              打印指定USER或当前用户（USER省略时）的用户和组信息
+   join, JOIN          在一个公共字段上连接两个文件的行
+   logname, LOGNAME    显示当前用户的名称
+   lscpu, LSCPU        显示 CPU 架构信息
+   mktemp, MKTEMP      创建临时文件、临时目录
+   mv, MV              文件重命名或文件剪切
+   nice, NICE          修改调度优先级运行程序
+   nl, NL              文本文件诸行添加数字编号打印到标准输出
+   nproc, NPROC        打印可用的处理器单元数
+   numfmt, NUMFMT      将数字转换为人类可读的字符串
+   paste, PASTE        合并文件文本行
+   pathchk, PATHCHK    检查文件名是否有效或可移植
+   printenv, PRINTENV  显示指定的环境变量的值。
+                       如果没有指定变量，则打印出所有变量的名称和值。
+   ptx, PTX            生成文件内容的排列索引
+   pwd, PWD            打印当前/工作目录名称
+   realpath, REALPATH  打印已解析的路径[绝对地址]
+   rm, RM              删除文件
+   seq, SEQ            打印数字序列(暂时只支持整数)
+   shred, SHRED        覆盖文件以隐藏其内容，并可选择将其删除
+   shuf, SHUF          生成随机排列
+   sort, SORT          排序文本文件的文本行
+   split, SPLIT        文件分片
+   stat, STAT          显示文件或文件系统状态
+   sync, SYNC          同步缓存写到持久存储
+   tail, TAIL          打印文本文件的最后10行到标准输出
+   tee, TEE            标准输入复制到每个指定文件，并显示到标准输出。
+   test, TEST          检查文件类型并比较值
+   timeout, TIMEOUT    有时间限制地运行命令
+   touch, TOUCH        更改文件时间戳
+   tr, TR              转换或删除字符
+   true, TRUE          什么都不做，成功执行空白进程
+   truncate, TRUNCATE  缩小或扩展文件的大小到指定的大小
+   tsort, TSORT        执行拓扑排序
+   tty, TTY            显示出连接到当前标准输入的终端设备文件名。
+   uname, UNAME        打印系统信息
+   unexpand, UNEXPAND  空格转换成制表符
+   uptime, UPTIME      显示系统运行了多长时间
+   users, USERS        根据文件判断输出当前有谁正登录在系统上。
+                       如果文件未予指定，则使用/var/run/utmp，/var/log/wtmp 是通用的相关文件
+   yes, YES            重复输出一个字符串直到被kill
+
+GLOBAL OPTIONS:
+   --help, -h     show help (default: false)
+   --version, -v  print the version (default: false)
+
+COPYRIGHT:
+   (c) 2020 - Forever Tacey Wong
+```
 ## Main
 
 **整个文件的输出**
