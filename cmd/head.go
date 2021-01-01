@@ -1,7 +1,10 @@
 package cmd
 
 import (
+	"bufio"
+	"errors"
 	"fmt"
+	"os"
 
 	"github.com/urfave/cli/v2"
 )
@@ -11,9 +14,10 @@ const HeadCMDVersion = "0.0.1"
 
 // HeadCMD define `head` cmd
 var HeadCMD = cli.Command{
-	Name:    "head",
-	Aliases: []string{"HEAD"},
-	Usage:   "打印文本文件的最前10行到标准输出",
+	Name:      "head",
+	UsageText: "core head [选项]... [文件]...",
+	Aliases:   []string{"HEAD"},
+	Usage:     "打印文本文件的最前10行到标准输出",
 	Description: `Print the first 10 lines of each FILE to standard output.
 	With more than one FILE, precede each with a header giving the file name.
 	
@@ -34,6 +38,7 @@ var HeadCMD = cli.Command{
 		}, &cli.IntFlag{
 			Name:    "lines",
 			Aliases: []string{"n"},
+			Value:   10,
 			Usage:   "print the first `NUM` lines instead of the first 10;with the leading '-', print all but the last NUM lines of each file",
 		}, &cli.BoolFlag{
 			Name:    "silent",
@@ -57,6 +62,35 @@ var HeadCMD = cli.Command{
 		if c.Bool("version") {
 			fmt.Println(HeadCMDVersion)
 			return nil
+		}
+		if c.Args().Len() == 0 {
+			return errors.New("尚未实现标准输入读取")
+		}
+		linesNum := c.Int("lines")
+		v := c.Bool("V")
+		end := "\n"
+		if c.Bool("z") {
+			end = ""
+		}
+		for _, p := range c.Args().Slice() {
+			file, err := os.Open(p)
+			if err != nil {
+				return err
+			}
+			scanner := bufio.NewScanner(file)
+			index := 1
+			if v {
+				fmt.Printf("==> %s <==\n", p)
+			}
+			for scanner.Scan() {
+				fmt.Printf("%s%s", scanner.Text(), end)
+				index++
+				if index > linesNum {
+					break
+				}
+			}
+			file.Close()
+
 		}
 		return nil
 	},
